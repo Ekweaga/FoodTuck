@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link"
 
 function Navbar() {
   return (
@@ -14,16 +15,16 @@ function Navbar() {
               Home
             </li>
             <li>
-              Home
+              About Us
             </li>
             <li>
-              Home
+              Shop
             </li>
             <li>
-              Home
+              Menu
             </li>
             <li>
-              Home
+              Our Chefs
             </li>
           </ul>
         </div>

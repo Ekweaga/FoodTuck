@@ -77,6 +77,29 @@ const members = [
     image:'/unsplash_EHK-EH1SRzQ.png'
   }
 ]
+
+const menu = [
+  {
+    name:"Alder Grilled Chinook Salmon",
+    desc:"Toasted French brand chopped chedical 500 Cal",
+    price:"$32"
+  },
+  {
+    name:"Alder Grilled Chinook Salmon",
+    desc:"Toasted French brand chopped chedical 500 Cal",
+    price:"$32"
+  },
+  {
+    name:"Alder Grilled Chinook Salmon",
+    desc:"Toasted French brand chopped chedical 500 Cal",
+    price:"$32"
+  },
+  {
+    name:"Alder Grilled Chinook Salmon",
+    desc:"Toasted French brand chopped chedical 500 Cal",
+    price:"$32"
+  }
+]
   return (
     <>
       <Head>
@@ -97,8 +120,8 @@ const members = [
         </div>
         <div className='relative'>
           <Image src="/Bg (1).png" width={900} height={200} alt="icon"/>
-          <div className='absolute left-[60px] bottom-[80px]'>
-            <Image src="/unsplash_IGfIGP5ONV0.png" width={500} height={300} alt="icon"/>
+          <div className='absolute -left-[10px] bottom-[80px] rotate-180'>
+            <Image src="/Image (1).png" width={530} height={300} alt="icon"/>
           </div>
 
         </div>
@@ -110,7 +133,7 @@ const members = [
 
         <div className="flex justify-around items-center gap-[100px]">
           <div>
-          <Image src="/Image (1).png" width={500} height={300} alt="icon"/>
+          <Image src="/Images.png" width={500} height={300} alt="icon"/>
           </div>
           <div>
             <h3>About Us</h3>
@@ -131,7 +154,7 @@ const members = [
 
 <div className="flex justify-around items-center gap-[100px]">
   <div>
-  <Image src="/Image.png" width={500} height={300} alt="icon"/>
+  <Image src="/Imagess.png" width={500} height={300} alt="icon"/>
   </div>
   <div>
   <div>
@@ -286,9 +309,53 @@ const members = [
 </div>
 </div>
 
+<div className="flex items-center justify-center mt-[300px] flex-col" >
+<div>
+        <h2 className="font-bold text-3xl text-center">Food Menu</h2>
+        <p className=' w-[450px] mt-[20px] text-center text-sm'>hLoreum ipsuhLoreum ipsum door sit amet, c
+       lit. Leo augue nibhr sit amet,
+         consectur adipiscing elit. Leo augue nibh</p>
+        </div>
+
+        <div className="flex gap-[40px] mt-[30px]">
+          <div className='flex flex-col gap-[40px]'>
+            {
+              menu.map((item,index)=>{
+                return (
+                  <div key={index} className="flex justify-between">
+                    <div>
+                      <h3 className='font-bold text-sm'>{item.name}</h3>
+                      <p className='text-sm'>{item.desc}</p></div>
+                      <div className="font-bold text-green-700">{item.price}</div>
+                  </div>
+                )
+              })
+            }
+          </div>
 
 
-<div className="flex items-center justify-center mt-[300px]" >
+
+          <div className="flex gap-[40px] flex-col ">
+
+          {
+              menu.map((item,index)=>{
+                return (
+                  <div key={index} className="flex justify-between">
+                    <div>
+                    <h3 className='font-bold text-sm'>{item.name}</h3>
+                      <p className='text-sm'>{item.desc}</p></div>
+                      <div className="font-bold text-green-700">{item.price}</div>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
+</div>
+
+
+
+<div className="flex items-center justify-center mt-[100px]" >
   <div className="flex gap-[80px]">
     <div>
         <h2>Testimonials</h2>

@@ -9,7 +9,7 @@ function Signup() {
     </div>
 
     <div className='h-[500px] flex items-center justify-center mt-[40px]'>
-<div className='h-[450px] shadow w-[280px] flex flex-col p-3'>
+<div className='h-[450px] shadow-lg w-[280px] flex flex-col p-3'>
   <h2 className='font-bold text-2xl'>Sign up</h2>
   <form className='flex flex-col gap-[15px] mt-[30px]'>
     <div>
