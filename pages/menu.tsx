@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image"
+import Head from "next/head"
 
 function Menu() {
 
@@ -35,12 +36,18 @@ function Menu() {
 
   return (
     <>
+
+    <Head>
+      <title>Foodtuck Menu</title>
+    </Head>
+    <link rel="icon" href="/unsplash_BsYD6CP0uEw.png" />
+
      <div style={{backgroundImage:'url("/unsplash_4ycv3Ky1ZZU.png")',backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className="h-[200px] text-white flex flex-col items-center justify-center" >
         <h1 className="text-3xl font-bold mb-[10px]">Our Menu</h1>
         <p className='text-[#195A00] '>Menu</p>
     </div>
 
-    <div className="mt-[50px] flex w-[80%] mx-auto gap-[0px] items-center justify-around">
+    <div className="mt-[50px] flex w-[80%] mx-auto gap-[0px] items-center justify-around flex-col md:flex-row">
         <Image src="/Rectangle 8874.png" width={350} height={200} alt="icon"/>
 
         <div>
@@ -66,7 +73,7 @@ function Menu() {
     </div>
 
 
-    <div className="mt-[50px] flex w-[80%] mx-auto gap-[0px] items-center justify-around flex-row-reverse">
+    <div className="mt-[50px] flex w-[80%] mx-auto gap-[0px] items-center justify-around md:flex-row-reverse flex-col ">
         <Image src="/Mask Group (10).png" width={350} height={200} alt="icon"/>
 
         <div>
@@ -96,7 +103,7 @@ function Menu() {
 
 
 
-<div className="grid grid-cols-4 gap-[60px]">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-[60px]">
     <div>
         <h3 className='font-bold text-3xl text-center'>420</h3>
         <p className='font-bold text-sm text-center mt-[20px]'>Professional Chefs</p>
@@ -120,7 +127,7 @@ function Menu() {
 </div>
     </div>
 
-    <div className="mt-[50px] flex w-[80%] mx-auto gap-[0px] items-center justify-around flex-row-reverse">
+    <div className="mt-[50px] flex w-[80%] mx-auto gap-[0px] items-center justify-around md:flex-row-reverse flex-col-reverse">
         <Image src="/Mask Group (10).png" width={350} height={200} alt="icon"/>
 
         <div>
@@ -150,7 +157,7 @@ function Menu() {
   <div>
     <h1 className="text-3xl font-bold text-center mb-[40px]">We work with the best people</h1>
   </div>
-  <div className="grid grid-cols-6 gap-[20px]">
+  <div className="grid grid-cols-2 md:grid-cols-6 gap-[20px]">
   <Image src="/image 2.png" width={150} height={200} alt="icon"/>
   <Image src="/image 56.png" width={150} height={200} alt="icon"/>
   <Image src="/image 57.png" width={150} height={200} alt="icon"/>

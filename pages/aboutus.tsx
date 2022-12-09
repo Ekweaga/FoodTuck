@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image"
+import Head from "next/head"
 
 
 
@@ -69,6 +70,12 @@ function aboutus() {
       ]
   return (
    <>
+
+   <Head>
+    <title>About Us</title>
+
+    <link rel="icon" href="/unsplash_BsYD6CP0uEw.png" />
+   </Head>
      <div style={{backgroundImage:'url("/unsplash_4ycv3Ky1ZZU.png")',backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className="h-[200px] text-white flex flex-col items-center justify-center" >
         <h1 className="text-3xl font-bold mb-[10px]">About Us</h1>
         <p className='text-[#195A00] '>About</p>
@@ -78,7 +85,7 @@ function aboutus() {
     
     <div className="mt-[100px] flex items-center justify-center">
 
-<div className="flex justify-around items-center gap-[100px]">
+<div className="flex justify-around items-center gap-[100px] flex-col-reverse md:flex-row px-3  ">
   <div>
   <Image src="/Images.png" width={500} height={300} alt="icon"/>
   </div>
@@ -86,7 +93,7 @@ function aboutus() {
     <h3>About Us</h3>
     <div>
       <h1 className="font-bold text-3xl mt-[20px]">Food is an Important <br/>part Of a balanced Diet</h1>
-      <p className=' w-[450px] mt-[20px]'>Loreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
+      <p className=' md:w-[450px] mt-[20px]'>Loreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
 
       <div className='mt-[30px] flex gap-[20px]'>
     <button className="bg-[#195A00] text-white p-2 rounded-md w-[150px]">Show More</button>
@@ -129,16 +136,16 @@ function aboutus() {
 
 
 
-<div style={{backgroundImage:'url("/Bg (2).png")',backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className="h-[350px] w-[100%] mt-[50px] relative">
+<div style={{backgroundImage:'url("/Bg (2).png")',backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className="px-3 h-[350px] w-[100%] mt-[50px] relative">
 
   <div className="flex flex-col items-center justify-center text-white">
     <div><h1 className="text-center mt-[50px] font-bold text-2xl">Team Member</h1>
-    <p className=' w-[450px] mt-[20px] text-center'>hLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
+    <p className=' md:w-[450px] mt-[20px] text-center'>hLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
     
     </div>
 
 
-    <div className='flex gap-[20px] mt-[100px]'>
+    <div className='grid grid-cols-2 md:grid-cols-4 gap-[20px] mt-[100px]'>
       {
         members.map((item,index)=>{
           return(
@@ -166,15 +173,15 @@ function aboutus() {
 
 
 
-<div className="flex items-center justify-center mt-[300px] flex-col" >
+<div className="flex items-center justify-center mt-[600px] flex-col md:mt-[300px]" >
 <div>
         <h2 className="font-bold text-3xl text-center">Food Menu</h2>
-        <p className=' w-[450px] mt-[20px] text-center text-sm'>hLoreum ipsuhLoreum ipsum door sit amet, c
+        <p className=' md:w-[450px] mt-[20px] text-center text-sm'>hLoreum ipsuhLoreum ipsum door sit amet, c
        lit. Leo augue nibhr sit amet,
          consectur adipiscing elit. Leo augue nibh</p>
         </div>
 
-        <div className="flex gap-[40px] mt-[30px]">
+        <div className="flex gap-[40px] mt-[30px] flex-col md:flex-row px-3">
           <div className='flex flex-col gap-[40px]'>
             {
               menu.map((item,index)=>{

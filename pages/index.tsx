@@ -108,17 +108,17 @@ const menu = [
         <link rel="icon" href="/unsplash_BsYD6CP0uEw.png" />
       </Head>
 
-      <header className='relative flex justify-between items-center '>
-        <div className='ml-[150px]'>
+      <header className='relative flex justify-between items-center flex-col lg:flex-row'>
+        <div className='md:ml-[150px] px-3'>
           <div><p className='text-[#195A00] mb-[15px] '>Its quick and amusing</p></div>
           <div><h1 className='font-bold text-5xl mb-[30px]'><span className='text-[#195A00] '>The</span> Art of Healthy life <br/>& Testy Food</h1>
-          <p className=' w-[550px] mt-[20px]'>Loreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
+          <p className=' md:placeholder:w-[550px] mt-[20px]'>Loreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
           <div className='mt-[30px] flex gap-[20px]'>
             <button className="bg-[#195A00] text-white p-2 rounded-md w-[150px]">Show More</button> <button className="w-[150px] border-[1px] border-[#195A00] rounded-md">Place Order</button>
           </div>
           </div>
         </div>
-        <div className='relative'>
+        <div className='relative mt-[50px] md:mt-0'>
           <Image src="/Bg (1).png" width={900} height={200} alt="icon"/>
           <div className='absolute -left-[10px] bottom-[80px] rotate-180'>
             <Image src="/Image (1).png" width={530} height={300} alt="icon"/>
@@ -131,7 +131,7 @@ const menu = [
 
       <div className="mt-[100px] flex items-center justify-center">
 
-        <div className="flex justify-around items-center gap-[100px]">
+        <div className="flex justify-around items-center gap-[100px] flex-col-reverse px-3 md:flex-row">
           <div>
           <Image src="/Images.png" width={500} height={300} alt="icon"/>
           </div>
@@ -139,7 +139,7 @@ const menu = [
             <h3>About Us</h3>
             <div>
               <h1 className="font-bold text-3xl mt-[20px]">Food is an Important <br/>part Of a balanced Diet</h1>
-              <p className=' w-[450px] mt-[20px]'>Loreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
+              <p className=' md:w-[450px] mt-[20px]'>Loreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
 
               <div className='mt-[30px] flex gap-[20px]'>
             <button className="bg-[#195A00] text-white p-2 rounded-md w-[150px]">Show More</button>
@@ -152,17 +152,17 @@ const menu = [
 
       <div className="mt-[100px] flex items-center justify-center">
 
-<div className="flex justify-around items-center gap-[100px]">
+<div className="flex justify-around items-center gap-[100px] flex-col-reverse px-3 md:flex-row">
   <div>
   <Image src="/Imagess.png" width={500} height={300} alt="icon"/>
   </div>
   <div>
   <div>
               <h1 className="font-bold text-3xl mt-[20px]">We are also the best <br/>quality Coffee maker</h1>
-              <p className=' w-[450px] mt-[20px]'>Loreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
+              <p className=' md:w-[450px] mt-[20px]'>Loreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
 
               <div>
-              <ul className="flex gap-[10px] text-white text-sm  flex-col mt-[30px]">
+              <ul className="flex gap-[10px] text-black text-sm  flex-col mt-[30px]">
             <li className=' '>
              - Experienced chefs
             </li>
@@ -197,7 +197,7 @@ const menu = [
       <h1 className='text-center mb-[20px] font-bold text-3xl'>Food Category</h1>
     </div>
 
-    <div className='grid grid-cols-4 gap-[20px]'>
+    <div className='grid grid-cols-2 md:grid-cols-4 gap-[20px]'>
       {
         foods.map((item:Food,index)=>{
           return(
@@ -223,7 +223,7 @@ const menu = [
       <h1 className='text-center mb-[20px] font-bold text-3xl'>Coffee Category</h1>
     </div>
 
-    <div className='flex gap-[20px]'>
+    <div className='flex gap-[20px] flex-col md:flex-row'>
 
     <div>
 
@@ -275,16 +275,16 @@ const menu = [
 </div>
 
 
-<div style={{backgroundImage:'url("/Bg (2).png")',backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className="h-[350px] w-[100%] mt-[50px] relative">
+<div style={{backgroundImage:'url("/Bg (2).png")',backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className="h-[350px] w-[100%] mt-[50px] relative px-3">
 
   <div className="flex flex-col items-center justify-center text-white">
     <div><h1 className="text-center mt-[50px] font-bold text-2xl">Team Member</h1>
-    <p className=' w-[450px] mt-[20px] text-center'>hLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
+    <p className=' md:w-[450px] mt-[20px] text-center'>hLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet, consectur adipiscing elit. Leo augue nibh</p>
     
     </div>
 
 
-    <div className='flex gap-[20px] mt-[100px]'>
+    <div className='grid grid-cols-2 md:grid-cols-4 gap-[20px] mt-[100px]'>
       {
         members.map((item,index)=>{
           return(
@@ -309,16 +309,16 @@ const menu = [
 </div>
 </div>
 
-<div className="flex items-center justify-center mt-[300px] flex-col" >
+<div className="flex items-center justify-center mt-[600px] flex-col md:mt-[300px]" >
 <div>
         <h2 className="font-bold text-3xl text-center">Food Menu</h2>
-        <p className=' w-[450px] mt-[20px] text-center text-sm'>hLoreum ipsuhLoreum ipsum door sit amet, c
+        <p className=' md:w-[450px] mt-[20px] text-center text-sm'>hLoreum ipsuhLoreum ipsum door sit amet, c
        lit. Leo augue nibhr sit amet,
          consectur adipiscing elit. Leo augue nibh</p>
         </div>
 
-        <div className="flex gap-[40px] mt-[30px]">
-          <div className='flex flex-col gap-[40px]'>
+        <div className="flex gap-[40px] mt-[30px] flex-col md:flex-row">
+          <div className='flex flex-col gap-[40px] px-3'>
             {
               menu.map((item,index)=>{
                 return (
@@ -335,7 +335,7 @@ const menu = [
 
 
 
-          <div className="flex gap-[40px] flex-col ">
+          <div className="flex gap-[40px] flex-col px-3 ">
 
           {
               menu.map((item,index)=>{
@@ -356,13 +356,13 @@ const menu = [
 
 
 <div className="flex items-center justify-center mt-[100px]" >
-  <div className="flex gap-[80px]">
+  <div className="flex gap-[80px] flex-col md:flex-row px-4">
     <div>
         <h2>Testimonials</h2>
         <div>
         <h1 className="font-bold text-3xl">Customer Review</h1>
         <Image src="/Quotes.png" width={50} height={50} alt="icon"/>
-        <p className=' w-[450px] mt-[20px] text-left text-sm'>hLoreum ipsuhLoreum ipsum door sit amet, c
+        <p className=' md:w-[450px] mt-[20px] text-left text-sm'>hLoreum ipsuhLoreum ipsum door sit amet, c
         onsectur adipiscing elit. Leo augue nibhr sit amet,m door sit amet, consectur 
         adipiscing elit. Leo augue nibhr sit amet,hLoreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhr sit amet,
          consectur adipiscing elit. Leo augue nibh</p>
@@ -402,7 +402,7 @@ const menu = [
   <div>
     <h1 className="text-3xl font-bold text-center mb-[40px]">We work with the best people</h1>
   </div>
-  <div className="grid grid-cols-6 gap-[20px]">
+  <div className="grid grid-cols-2 md:grid-cols-6 gap-[20px]">
   <Image src="/image 2.png" width={150} height={200} alt="icon"/>
   <Image src="/image 56.png" width={150} height={200} alt="icon"/>
   <Image src="/image 57.png" width={150} height={200} alt="icon"/>

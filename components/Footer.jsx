@@ -4,15 +4,15 @@ import Image from "next/image"
 function Footer() {
   return (
    <>
-   <footer style={{backgroundImage:'url("/unsplash_Y6O6PHJRQms.png")',backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className="h-[350px] w-[100%] mt-[250px] relative">
+   <footer style={{backgroundImage:'url("/unsplash_Y6O6PHJRQms.png")',backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className="md:h-[350px] w-[100%] mt-[250px] relative">
 <div className='w-full h-full bg-black/50 relative flex-col items-center  flex text-white'>
 <div className=" bg-white w-[800px] h-[140px] rounded-md shadow-lg -mt-[80px] flex flex-col items-center justify-center gap-[30px]">
-<h2 className="text-2xl font-bold">Subscribe To Our Newsletter</h2>
-<div>
-  <input type="email" placeholder="Email" className="border-[1px] border-green-800 w-[250px] h-[40px] px-2"/><button className="bg-[#195A00] text-white p-2 w-[150px]">Show More</button>
+<h2 className="text-2xl font-bold text-black">Subscribe To Our Newsletter</h2>
+<div className="flex flex-col md:flex-row items-center justify-center mb-[20px] md:mb-0 gap-[10px] md:gap-[4px]">
+  <input type="email" placeholder="Email" className="border-[1px] border-green-800 w-[250px] h-[40px] px-2"/><button className="bg-[#195A00] text-white p-2 md:w-[150px] w-[250px]">Show More</button>
 </div>
 </div>
-<div className='grid grid-cols-3 gap-[60px] mt-[50px]'>
+<div className='grid grid-cols-1 md:grid-cols-3 gap-[60px] mt-[50px]'>
   <div>
   <h1 className='text-2xl ml-[0px] font-bold text-white'>Food<span className='text-[#195A00] '>tuck</span></h1>
   <p className=' w-[350px] mt-[20px] text-white'>Loreum ipsum door sit amet, consectur adipiscing elit. Leo augue nibhLoreum ipsum door sit amet, consectur adipiscing
@@ -55,7 +55,7 @@ function Footer() {
 <Image src="/unsplash_x1ZZWyDU8sU.png" width={160} height={200} alt="icon"/>
 </div>
    </footer>
-   <div className="bg-[#195A00] h-[050px] flex justify-around items-center text-white text-sm ">
+   <div className="bg-[#195A00] md:h-[050px] flex justify-around items-center text-white text-sm flex-col px-3 py-4">
     <p>Copyright @ 2022 by Ayeman.All Rights reserved</p>
    <Image src="/Sociali icon.png" width={160} height={200} alt="icon"/>
     </div>
