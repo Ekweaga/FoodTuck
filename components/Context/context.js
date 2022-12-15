@@ -9,6 +9,13 @@ export const CartProvider = ({children})=>{
     const [cartitems,setCartItems] = useState([])
     const [totalproducts,setTotalProducts] = useState(0);
     const [totalamount,setTotalamount] = useState(0)
+    const [totalprice,setTotalprice] = useState(0)
+
+    const total = ()=>{
+  return   cartitems.reduce(
+            (price,item) => price + item.quantity *  item.price  , 0
+        )
+    }
 
     const addtocart = (product)=>{
     const existingItem = cartitems.find((item)=>item.id === product.id)
@@ -29,10 +36,8 @@ export const CartProvider = ({children})=>{
 
     const remove = (product)=>{
         const existingCartItem = cartitems.find((cartitem)=>cartitem.id === product.id);
-        if(existingCartItem.quantity === 1){
-                return setCartItems(cartitems.filter(cartitem=>cartitem.id !== product.id))
-        }
-        return setCartItems(cartitems.map((cartitem)=>cartitem.id === product.id ? {...cartitem, quantity: cartitem.quantity - 1} : cartitem))
+           return setCartItems(cartitems.filter((cartitem)=>cartitem.id !== existingCartItem.id));
+   
     }
 
     const clear = ()=>{
@@ -44,7 +49,7 @@ export const CartProvider = ({children})=>{
         if(existingCartItem){
             return setCartItems(cartitems.map((item)=>item.id === id ? {...item, quantity:item.quantity + 1, price:item.price += item.price} : item))
         }
-
+        setTotalProducts(totalproducts + 1)
        
     }
 
@@ -54,6 +59,7 @@ export const CartProvider = ({children})=>{
         if(existingCartItem){
             if(existingCartItem.quantity === 1){
                const filtered =  cartitems.filter(cartitem=>cartitem.id !== existingCartItem.id)
+              
                return setCartItems(filtered)
 
         }
@@ -61,11 +67,11 @@ export const CartProvider = ({children})=>{
         else{
             return   setCartItems(cartitems.map((item)=>item.id === id ? {...item, quantity:item.quantity - 1, price:item.price -= item.price} :item))
         }
-            
+        setTotalProducts(totalproducts - 1)
         }
     }
     return(
-    <Cart.Provider value={{totalproducts,addtocart,cartitems,clear,remove,totalamount,increase,decrease}}>
+    <Cart.Provider value={{totalproducts,addtocart,cartitems,clear,remove,totalamount,increase,decrease,total}}>
         {children}
     </Cart.Provider>
     )

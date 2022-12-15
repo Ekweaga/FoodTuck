@@ -35,6 +35,9 @@ function Navbar() {
             <li>
             <Link href="/shop/shopcart">Cart</Link> 
             </li>
+            <li>
+            <Link href="/shop/checkout">Checkout</Link> 
+            </li>
           </ul>
         </div>
 

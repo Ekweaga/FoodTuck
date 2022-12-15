@@ -3,10 +3,14 @@ import {productList} from "./productlist"
 import {ProductList} from "./productlist"
 import Image from "next/image"
 import Link from "next/link"
+import Head from 'next/head'
 
 function shop() {
   return (
   <>
+  <Head>
+    <title>Shop Items</title>
+  </Head>
    <div style={{backgroundImage:'url("/unsplash_4ycv3Ky1ZZU.png")',backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className="h-[200px] text-white flex flex-col items-center justify-center" >
         <h1 className="text-3xl font-bold mb-[10px]">Our Shop</h1>
         <p className='text-[#195A00] '>Shop</p>

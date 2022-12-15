@@ -119,7 +119,7 @@ const menu = [
           </div>
         </div>
         <div className='relative mt-[50px] md:mt-0'>
-          <Image src="/Bg (1).png" width={900} height={200} alt="icon"/>
+          <Image src="/Bg (1).png" width={1600} height={200} alt="icon"/>
           <div className='absolute -left-[10px] bottom-[80px] rotate-180'>
             <Image src="/Image (1).png" width={530} height={300} alt="icon"/>
           </div>

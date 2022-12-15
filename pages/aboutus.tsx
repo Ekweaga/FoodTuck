@@ -104,21 +104,25 @@ function aboutus() {
 </div>
 
 
-<div className="flex items-center justify-center flex-col">
+<div className="flex items-center justify-center flex-col mt-[80px]">
 
     <div>
-<h3 className="text-3xl font-bold text-center">Why Choose Us</h3>
+<h3 className="text-3xl font-bold text-center mb-[30px]">Why Choose Us</h3>
     </div>
 <div>
 <Image src="/unsplash_3iexvMShGfQ.png" width={800} height={300} alt="icon"/>
 </div>
 
-<div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-[20px] w-[80%] mx-auto mt-[50px]">
     {
         WhyUs.map((item,index)=>{
             return(
-                <div className="" key={index}>
-                    <Image src={item.icon} width={100} height={50} alt="icon"/>
+                <div className=" flex flex-col items-center justify-center" key={index}>
+                    <Image src={item.icon} width={70} height={50} alt="icon"/>
+                    <div>
+                      <h1 className="font-bold text-center">{item.name}</h1>
+                      <p className="text-center text-sm">{item.desc}</p>
+                    </div>
                  </div>
             )
         })
